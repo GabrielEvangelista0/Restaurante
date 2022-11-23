@@ -8,7 +8,7 @@ export default function Home(){
           <div>
             <h1>Restaurante D'épices</h1>
             <span>
-                Sempre servindo comida boa
+                Sempre servindo comida boa.
             </span>
           </div>
         </StyledHome>
