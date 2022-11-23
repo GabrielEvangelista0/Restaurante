@@ -5,9 +5,9 @@ import styled from 'styled-components'
 export default function Cardapio() {
     return (
         <>
-            <header>
+            <Header>
                 <Menu />
-            </header>
+            </Header>
 
             <StyledCardapio>
                 {cardapio.map(prato => (
@@ -26,18 +26,17 @@ export default function Cardapio() {
 }
 
 const StyledCardapio = styled.div`
+    margin: auto;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 75%;
-    margin: auto;
     padding: 2rem 0px;
     
 `
 
 const StyledPrato = styled.div`
-    
         width: 40%;
-        margin: auto;
         margin: 1rem;
         padding: 1rem;
         text-align: center;
@@ -55,4 +54,12 @@ const StyledPrato = styled.div`
             border-radius: 25px;
             box-shadow: 3px 3px 5px rgb(0 0 0 / 10%);
         }
+`
+
+const Header = styled.header`
+ background-color: var(--cor1);
+ padding: 1.5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 `

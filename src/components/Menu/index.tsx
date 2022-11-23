@@ -50,7 +50,7 @@ const StyledMenu = styled.div`
             padding: 0 10px;
             a{
                 text-decoration: none;
-                color: var(--cor3);
+                color: var(--cor0);
                 font-size: 1.5rem;
                 padding: 10px;
                 
