@@ -18,26 +18,30 @@ export default function Menu(){
     ]
     return(
         <StyledMenu>
-            <ul>
-                {route.map((rota) => (
-                    <li key={rota.label}>
-                        <Link to={rota.to}>
-                            {rota.label}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <nav>
+                <ul>
+                    {route.map((rota) => (
+                        <li key={rota.label}>
+                            <Link to={rota.to}>
+                                {rota.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
         </StyledMenu>
     )
 }
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
 
     ul{
         display: flex;
         align-items: center;
+        justify-content: center;
         margin: 0px;
         padding: 0px;
         
