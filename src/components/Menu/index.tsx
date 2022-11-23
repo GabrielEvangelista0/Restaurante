@@ -45,14 +45,13 @@ const StyledMenu = styled.div`
         justify-content: center;
         margin: 0px;
         padding: 0px;
-        color: var(--cor3);
         list-style-type: none;
         li{
             
             padding: 0 10px;
             a{
                 text-decoration: none;
-                
+                color: var(--cor3);
                 font-size: 1.5rem;
                 padding: 10px;
                 
