@@ -28,6 +28,7 @@ export default function Menu(){
                         </li>
                     ))}
                 </ul>
+                teste
             </nav>
         </StyledMenu>
     )
@@ -37,20 +38,21 @@ const StyledMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    ul{
+    nav{
+        ul{
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0px;
         padding: 0px;
-        
+        color: var(--cor3);
+        list-style-type: none;
         li{
-            list-style-type: none;
+            
             padding: 0 10px;
             a{
                 text-decoration: none;
-                color: black;
+                
                 font-size: 1.5rem;
                 padding: 10px;
                 
@@ -62,4 +64,7 @@ const StyledMenu = styled.div`
             }
         }
     }
+    }
+
+    
 `
