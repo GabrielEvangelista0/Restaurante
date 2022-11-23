@@ -6,18 +6,18 @@ export default function Cardapio() {
     return (
         <>
             <header>
-                <Menu/>
+                <Menu />
             </header>
 
             <StyledCardapio>
                 {cardapio.map(prato => (
-                    <div className='prato' key={prato.id}>
-                        <div className='imagem'><img src={prato.photo} alt={prato.title} /></div>
+                    <StyledPrato className='prato' key={prato.id}>
+                        <img src={prato.photo} alt={prato.title} />
                         <h3>
                             {prato.title}
                         </h3>
                         <p>{prato.description}</p>
-                    </div>
+                    </StyledPrato>
                 ))}
             </StyledCardapio>
         </>
@@ -31,8 +31,11 @@ const StyledCardapio = styled.div`
     width: 75%;
     margin: auto;
     padding: 2rem 0px;
+    
+`
 
-    .prato{
+const StyledPrato = styled.div`
+    
         width: 40%;
         margin: auto;
         margin: 1rem;
@@ -52,6 +55,4 @@ const StyledCardapio = styled.div`
             border-radius: 25px;
             box-shadow: 3px 3px 5px rgb(0 0 0 / 10%);
         }
-    }
-    
 `
