@@ -8,11 +8,11 @@ export default function Menu(){
             label: 'Home'
         },
         {
-            to: 'cardapio',
+            to: '/cardapio/',
             label: 'Cardápio'
         },
         {
-            to: 'sobre',
+            to: '/sobre/',
             label: 'Sobre'
         }
     ]

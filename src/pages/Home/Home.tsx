@@ -16,8 +16,6 @@ export default function Home() {
 }
 
 const StyledHome = styled.div`
-    @import url('../../styles/_variaveis');
-
     color: white;
     height: 100vh;
     width: 100vw;
