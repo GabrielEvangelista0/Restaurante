@@ -17,8 +17,7 @@ export default function Menu(){
         }
     ]
     return(
-        <StyledMenu>
-            <nav>
+            <StyledMenu>
                 <ul>
                     {route.map((rota) => (
                         <li key={rota.label}>
@@ -28,16 +27,13 @@ export default function Menu(){
                         </li>
                     ))}
                 </ul>
-            </nav>
-        </StyledMenu>
+            </StyledMenu>
     )
 }
 
 const StyledMenu = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
-    nav{
         ul{
         display: flex;
         align-items: center;
@@ -62,7 +58,5 @@ const StyledMenu = styled.div`
             }
         }
     }
-    }
-
     
 `
