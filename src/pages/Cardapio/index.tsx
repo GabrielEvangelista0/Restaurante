@@ -1,5 +1,4 @@
 import cardapio from 'data/cardapio.json'
-import Menu from 'components/Menu'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 
@@ -53,6 +52,7 @@ const StyledPrato = styled.div`
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        transition: 300ms;
         &:hover{
             background-color: var(--cor3);
             border-radius: 20px;

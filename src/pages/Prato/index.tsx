@@ -2,27 +2,48 @@ import cardapio from "data/cardapio.json"
 import { useParams } from "react-router-dom"
 import styled from "styled-components"
 
+type typePrato = typeof cardapio[0]
+
 export default function Prato() {
     const params = useParams()
-    const prato = cardapio.filter(item => {
+    const pratoFiltrado = cardapio.filter(item => {
         return item.id === Number(params.id)
     })
+    const prato = pratoFiltrado[0]
+
+    function guardaPedido(prato: typePrato) {
+        localStorage.setItem('pedido', JSON.stringify([
+            {
+                nome: '',
+                telefone: '',
+                endereco: {
+                    bairro: '',
+                    rua: '',
+                    numero: ''
+                },
+
+                prato: prato
+            }
+        ]))
+    }
 
     return (
         <StyledPrato>
-            <img src={prato[0].photo} alt={prato[0].title} />
+            <img src={prato.photo} alt={prato.title} />
             <StyledDescricao>
-                <h2> {prato[0].title} </h2>
+                <h2> {prato.title} </h2>
                 <p>
-                    {prato[0].description}
+                    {prato.description}
                 </p>
                 <div className="tags">
-                    <span className={prato[0].category.label.toLocaleLowerCase()}> {prato[0].category.label} </span>
-                    <span> serve {prato[0].serving} pessoas </span>
-                    <span> {prato[0].size}g </span>
+                    <span className={prato.category.label.toLocaleLowerCase()}> {prato.category.label} </span>
+                    <span> serve {prato.serving} pessoas </span>
+                    <span> {prato.size}g </span>
                 </div>
-                <span className="price"> {prato[0].price}R$ </span>
-                <button>
+                <span className="price"> {prato.price}R$ </span>
+                <button
+                    onClick={() => guardaPedido(prato)}
+                >
                     Adcionar na sacola
                 </button>
             </StyledDescricao>

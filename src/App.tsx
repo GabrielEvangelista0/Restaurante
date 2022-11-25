@@ -2,6 +2,7 @@ import PaginaPadrao from 'components/PaginaPadrao/indec';
 import Cardapio from 'pages/Cardapio';
 import Home from 'pages/Home/Home';
 import Prato from 'pages/Prato';
+import Sacola from 'pages/Sacola';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route element={<PaginaPadrao/>}>
         <Route path='/cardapio/' element={<Cardapio/>} />
         <Route path='/prato/:id/' element={<Prato/>}/>
+        <Route path='/sacola/' element={<Sacola/>}/>
       </Route>
       
     </Routes>

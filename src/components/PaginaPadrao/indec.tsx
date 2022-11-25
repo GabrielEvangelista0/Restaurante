@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "components/Menu";
 
@@ -26,8 +26,7 @@ const Header = styled.header`
 
  h1{
     position: absolute;
-    top: 1px;
-    right: 70vw;
+    left: 20%;
  }
 
 `

@@ -1,9 +1,11 @@
 import Menu from "components/Menu"
+import SacolaButton from "components/SacolaButton"
 import styled from "styled-components"
 
 export default function Home() {
     return (
         <StyledHome>
+            
             <Menu />
             <div>
                 <h1>Restaurante D'épices</h1>

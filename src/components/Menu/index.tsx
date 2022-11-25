@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import SacolaButton from "components/SacolaButton";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Menu() {
@@ -28,6 +29,7 @@ export default function Menu() {
                     </li>
                 ))}
             </ul>
+            <SacolaButton/>
         </StyledMenu>
 
     )
@@ -51,6 +53,7 @@ const StyledMenu = styled.nav`
                 color: var(--cor0);
                 font-size: 1.5rem;
                 padding: 10px;
+                transition: 300ms;
                 
                 &:hover{
                     cursor: pointer;
