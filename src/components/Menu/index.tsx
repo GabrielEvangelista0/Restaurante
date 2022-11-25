@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Menu(){
+export default function Menu() {
     const route = [
         {
             to: '/',
@@ -16,22 +16,24 @@ export default function Menu(){
             label: 'Sobre'
         }
     ]
-    return(
-            <StyledMenu>
-                <ul>
-                    {route.map((rota) => (
-                        <li key={rota.label}>
-                            <Link to={rota.to}>
-                                {rota.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </StyledMenu>
+    return (
+
+        <StyledMenu>
+            <ul>
+                {route.map((rota) => (
+                    <li key={rota.label}>
+                        <Link to={rota.to}>
+                            {rota.label}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </StyledMenu>
+
     )
 }
 
-const StyledMenu = styled.div`
+const StyledMenu = styled.nav`
     display: flex;
     align-items: center;
         ul{

@@ -15,7 +15,8 @@
 }
 
 body{
-    background-color: #f6f6f6;
+    background-color: var(--cor0);
+    color: var(--cor1);
 }
 
 #root > main.container {

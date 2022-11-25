@@ -1,53 +1,37 @@
 import cardapio from 'data/cardapio.json'
 import Menu from 'components/Menu'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 export default function Cardapio() {
-    return (
-        <>
-            <Header>
-                <h1>D'épices</h1>
-                <Menu />
-            </Header>
 
-            <StyledCardapio>
-                {cardapio.map(prato => (
-                    <StyledPrato className='prato' key={prato.id}>
-                        <img src={prato.photo} alt={prato.title} />
-                        <h3>
-                            {prato.title}
-                        </h3>
-                        <p>{prato.description}</p>
-                        <div className='tags-price'>
-                            <div className='tags'>
-                                <span className={prato.category.label.toLocaleLowerCase()} > {prato.category.label} </span>
-                                <span> serve {prato.serving} pessoas </span>
-                                <span> {prato.size}g </span>
-                            </div>
-                            <span className='price'> {prato.price}R$ </span>
+    const navagate = useNavigate()
+
+    return (
+
+        <StyledCardapio>
+            {cardapio.map(prato => (
+                <StyledPrato className='prato' key={prato.id} onClick={() => navagate(`/prato/${prato.id}`)} >
+                    <img src={prato.photo} alt={prato.title} />
+                    <h3>
+                        {prato.title}
+                    </h3>
+                    <p>{prato.description}</p>
+                    <div className='tags-price'>
+                        <div className='tags'>
+                            <span className={prato.category.label.toLocaleLowerCase()} > {prato.category.label} </span>
+                            <span> serve {prato.serving} pessoas </span>
+                            <span> {prato.size}g </span>
                         </div>
-                    </StyledPrato>
-                ))}
-            </StyledCardapio>
-        </>
+                        <span className='price'> {prato.price}R$ </span>
+                    </div>
+                </StyledPrato>
+            ))}
+        </StyledCardapio>
+
 
     )
 }
-
-const Header = styled.header`
- background-color: var(--cor1);
- padding: 1.5rem;
- display: flex;
- align-items: center;
- justify-content: center;
-
- h1{
-    position: absolute;
-    top: 1px;
-    right: 70vw;
- }
-
-`
 
 const StyledCardapio = styled.div`
     margin: auto;
@@ -73,6 +57,7 @@ const StyledPrato = styled.div`
             background-color: var(--cor3);
             border-radius: 20px;
             cursor: pointer;
+            color: white;
         }
         p{
             text-align: justify;
