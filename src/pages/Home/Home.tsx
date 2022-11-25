@@ -1,5 +1,4 @@
 import Menu from "components/Menu"
-import SacolaButton from "components/SacolaButton"
 import styled from "styled-components"
 
 export default function Home() {
