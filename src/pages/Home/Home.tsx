@@ -1,16 +1,16 @@
 import Menu from "components/Menu"
 import styled from "styled-components"
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <StyledHome>
-            <Menu/>
-          <div>
-            <h1>Restaurante D'épices</h1>
-            <span>
-                Sempre servindo comida boa.
-            </span>
-          </div>
+            <Menu />
+            <div>
+                <h1>Restaurante D'épices</h1>
+                <span>
+                    Sempre servindo comida boa.
+                </span>
+            </div>
         </StyledHome>
     )
 }
@@ -32,16 +32,12 @@ const StyledHome = styled.div`
 
     div{
         text-align: center;
-        
 
-        h1{
-            border-bottom: 2px solid var(--cor3);
-            font-family: 'Great Vibes', cursive;
-            font-weight: normal;
-            font-size: 4rem;
-            padding-bottom: 1.5rem;
-            color: var(--cor3);
-        }
+    h1{
+        border-bottom: 2px solid var(--cor3);
+        font-size: 4rem;
+        padding-bottom: 1.5rem;
+    }
 
         span{
             font-size: 1.5rem;

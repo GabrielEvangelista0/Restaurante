@@ -6,6 +6,7 @@
     --cor2: #BF0404;
     --cor3: #BF7E45;
     --cor4: #732002;
+    --cor5: #007320;
 }
 
 *{
@@ -22,3 +23,9 @@ body{
     flex-direction: column;
     min-height: 100vh;
   }
+
+  h1{
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    color: var(--cor3);
+}
