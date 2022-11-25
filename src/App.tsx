@@ -1,7 +1,6 @@
 import Cardapio from 'pages/Cardapio';
 import Home from 'pages/Home/Home';
-import { Router, Routes, Route } from 'react-router-dom';
-import cardapio from './data/cardapio.json'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
