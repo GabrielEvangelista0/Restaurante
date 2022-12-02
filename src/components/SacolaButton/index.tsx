@@ -1,20 +1,12 @@
 import { BsBagFill } from '@react-icons/all-files/bs/BsBagFill'
-import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 export default function SacolaButton() {
     const navegate = useNavigate()
-    const pedido = JSON.parse(localStorage.getItem('pedido') || '')
-    const pratos = pedido[0].pratos
-    console.log(pratos);
-    
-
-
     return (
         <Sacola onClick={() => navegate('/sacola/')}>
-            <BsBagFill/>
-            <span> {pratos} </span>
+            <BsBagFill />
         </Sacola>
     )
 }
@@ -31,13 +23,6 @@ const Sacola = styled.button`
 
     &:hover{
         color: var(--cor4);
-    }
-    span{
-        color: var(--cor1);
-        font-size: 1rem;
-        position: relative;
-        top: -6px;
-        left: -50%;
     }
 
 `

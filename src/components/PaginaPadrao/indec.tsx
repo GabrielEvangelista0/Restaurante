@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "components/Menu";
+import Footer from "components/Footer";
+import './index.css'
 
 export default function PaginaPadrao() {
     
@@ -10,16 +12,17 @@ export default function PaginaPadrao() {
                 <h1>D'épices</h1>
                 <Menu/>
             </Header>
-            <div>
+            <div className="conteudo">
                 <Outlet />
             </div>
+            <Footer/>
         </div>
     )
 }
 
 const Header = styled.header`
  background-color: var(--cor1);
- padding: 1.5rem;
+ padding: 1rem;
  display: flex;
  align-items: center;
  justify-content: center;
