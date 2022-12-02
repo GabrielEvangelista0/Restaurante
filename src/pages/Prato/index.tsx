@@ -22,7 +22,7 @@ export default function Prato() {
                     numero: ''
                 },
 
-                prato: prato
+                pratos: [ prato ]
             }
         ]))
     }
