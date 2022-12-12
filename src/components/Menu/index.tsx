@@ -1,4 +1,5 @@
 import SacolaButton from "components/SacolaButton";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -16,7 +17,10 @@ export default function Menu() {
             to: '/sobre/',
             label: 'Sobre'
         }
-    ]
+
+        
+    ] 
+    const [numero, setnumero] = useState<number>(5)
     return (
 
         <StyledMenu>

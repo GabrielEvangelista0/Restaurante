@@ -1,8 +1,11 @@
 import cardapio from "data/cardapio.json"
+import { useState } from "react"
 import { useParams } from "react-router-dom"
+import { useSetRecoilState } from "recoil"
 import styled from "styled-components"
-
-type typePrato = typeof cardapio[0]
+import typePrato from 'types/Pratos'
+import { pratosPedidosState } from 'state/atom'
+import { useAddPedidoSacola } from "state/hooks/usePedidoSacola"
 
 export default function Prato() {
     const params = useParams()
@@ -10,22 +13,7 @@ export default function Prato() {
         return item.id === Number(params.id)
     })
     const prato = pratoFiltrado[0]
-
-    function guardaPedido(prato: typePrato) {
-        localStorage.setItem('pedido', JSON.stringify([
-            {
-                nome: '',
-                telefone: '',
-                endereco: {
-                    bairro: '',
-                    rua: '',
-                    numero: ''
-                },
-
-                prato: prato
-            }
-        ]))
-    }
+    const adicionarNaSacola = useAddPedidoSacola()
 
     return (
         <StyledPrato>
@@ -42,7 +30,7 @@ export default function Prato() {
                 </div>
                 <span className="price"> {prato.price}R$ </span>
                 <button
-                    onClick={() => guardaPedido(prato)}
+                    onClick={() => adicionarNaSacola(prato)}
                 >
                     Adcionar na sacola
                 </button>
