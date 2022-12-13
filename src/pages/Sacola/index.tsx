@@ -10,7 +10,7 @@ export default function Sacola() {
     const pedidos = useRecoilValue(pratosPedidosState)
 
     return (
-        <section>
+        <StyledSacola>
 
             <PratosSacola>
                 {pedidos.map(pedido => (
@@ -37,9 +37,35 @@ export default function Sacola() {
             </PratosSacola>
 
             <button>Finalizar Pedido</button>
-        </section>
+        </StyledSacola>
     )
 }
+
+const StyledSacola = styled.section`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    button{
+        width: 200px;
+        background-color: var(--cor1);
+        border: none;
+        cursor: pointer;
+        color: var(--cor3);
+        font-weight: bold;
+        padding: 1rem;
+        border-radius: 25px;
+        transition: 300ms;
+
+        &:hover{
+            background-color: var(--cor3);
+            color: var(--cor1);
+        }
+    }
+
+`
 
 const PratosSacola = styled.div`
 
@@ -47,7 +73,6 @@ const PratosSacola = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem;
     width: 70%;
     margin: auto;
 
@@ -60,7 +85,7 @@ const StyledPrato = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 40%;
+    width: 30%;
     margin-bottom: 2rem;
 
     img{
