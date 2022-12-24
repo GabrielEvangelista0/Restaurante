@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { IPedido } from "types/Pedido";
+import { IPedido } from "interfaces/Pedido";
 import cardapio from "data/cardapio.json"
 
 export const pratosPedidosState = atom<IPedido[]>({

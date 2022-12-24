@@ -1,10 +1,6 @@
 import cardapio from "data/cardapio.json"
-import { useState } from "react"
 import { useParams } from "react-router-dom"
-import { useSetRecoilState } from "recoil"
 import styled from "styled-components"
-import typePrato from 'types/Pratos'
-import { pratosPedidosState } from 'state/atom'
 import { useAddPedidoSacola } from "state/hooks/usePedidoSacola"
 
 export default function Prato() {

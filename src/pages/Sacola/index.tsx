@@ -1,20 +1,22 @@
 import { useNavigate } from "react-router-dom"
-import { useRecoilValue } from "recoil"
-import { pratosPedidosState } from "state/atom"
 import styled from "styled-components"
 import { SlArrowDown, SlArrowUp } from "react-icons/sl"
+import { useAdcionar, useSubtrair } from "state/hooks/mudaQuantidadeDoPedido"
+import { useMostrarPedidos } from "state/hooks/useMostrarPedidos"
 
 export default function Sacola() {
 
     const navegate = useNavigate()
-    const pedidos = useRecoilValue(pratosPedidosState)
+    const pedidos = useMostrarPedidos()
+    const adicionar = useAdcionar()
+    const subtrair = useSubtrair()
 
     return (
         <StyledSacola>
 
             <PratosSacola>
                 {pedidos.map(pedido => (
-                    <StyledPrato key={pedido.prato.title}>
+                    <StyledPrato key={pedido.id}>
                         <img src={pedido.prato.photo} alt="" />
                         <div className="descricao">
                             <h3 onClick={() => navegate(`/prato/${pedido.prato.id}/`)} > {pedido.prato.title} </h3>
@@ -25,10 +27,16 @@ export default function Sacola() {
                             </div>
                             <span className="price"> {pedido.prato.price * pedido.quantidade}R$ </span>
                             <div className="quantidade">
-                                Qtd: <input type="number" value={pedido.quantidade} />
+                                <span>Qtd: <span>{pedido.quantidade}</span></span>
                                 <div className="setas">
-                                    <SlArrowUp />
-                                    <SlArrowDown />
+                                    <SlArrowUp
+                                        role='button'
+                                        onClick={() => adicionar(pedido)}
+                                    />
+                                    <SlArrowDown
+                                        role='button'
+                                        onClick={() => subtrair(pedido)}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -85,7 +93,7 @@ const StyledPrato = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 30%;
+    width: 35%;
     margin-bottom: 2rem;
 
     img{
@@ -145,22 +153,14 @@ const StyledPrato = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+        span{
+            padding: 1rem;
         }
-        input{
-            width: 30px;
-            border: none;
-            text-align: center;
-            cursor: default;
-        }
-
         .setas{
             display: flex;
             flex-direction: column;
             color: var(--cor3);
+            cursor: pointer;
         }
     }
 
