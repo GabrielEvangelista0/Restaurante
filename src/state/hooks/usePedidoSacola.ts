@@ -11,11 +11,13 @@ export const useAddPedidoSacola = () => {
         setPedido(listaAntiga => [...listaAntiga, { prato: prato, quantidade: 1, id: obterID() }])
         pedido.forEach(item => {
             let novalista = [...pedido];
-            if (prato.id == item.prato.id) {
+            const indice = novalista.findIndex((i) => i.prato.id === prato.id)
+            if (prato.id === item.prato.id) {
                 if(novalista.length > 1){
-                    novalista.pop()
+                    novalista.splice(indice, 1)
                     novalista = [...novalista, { prato: prato, quantidade: 1, id: obterID() }]
                 }
+                console.log(novalista)
                 setPedido(novalista)
             }
         })

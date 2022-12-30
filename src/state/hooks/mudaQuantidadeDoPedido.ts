@@ -23,7 +23,7 @@ export const useSubtrair = () => {
         let num = pedido.quantidade
         num--
         const novaLista = [...pedidos].map((item) => {
-            if (item.id === pedido.id) return { ...item, quantidade: num };
+            if (item.id === pedido.id && pedido.quantidade > 1) return { ...item, quantidade: num };
             else return item;
         });
         setPedidos(novaLista)

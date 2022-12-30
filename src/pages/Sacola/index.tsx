@@ -44,7 +44,7 @@ export default function Sacola() {
                 ))}
             </PratosSacola>
 
-            <button>Finalizar Pedido</button>
+            <button onClick={() => navegate('/finalizar-pedido/')}>Finalizar Pedido</button>
         </StyledSacola>
     )
 }
