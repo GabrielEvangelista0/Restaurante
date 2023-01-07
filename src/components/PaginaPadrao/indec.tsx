@@ -12,9 +12,9 @@ export default function PaginaPadrao() {
                 <h1>D'épices</h1>
                 <Menu/>
             </Header>
-            <div className="conteudo">
+            <main className="conteudo">
                 <Outlet />
-            </div>
+            </main>
             <Footer/>
         </div>
     )
@@ -30,6 +30,12 @@ const Header = styled.header`
  h1{
     position: absolute;
     left: 20%;
+ }
+
+ @media screen and (max-width: 768px) {
+    h1{
+        display: none;
+    }
  }
 
 `

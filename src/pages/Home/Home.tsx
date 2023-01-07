@@ -6,7 +6,7 @@ export default function Home() {
         <StyledHome>
             
             <Menu />
-            <div>
+            <div className="texto-home">
                 <h1>Restaurante D'épices</h1>
                 <span>
                     Sempre servindo comida boa.
@@ -29,7 +29,7 @@ const StyledHome = styled.div`
     background-size: cover;
     background-position: center center;
 
-    div{
+    .texto-home{
         text-align: center;
 
     h1{
@@ -40,6 +40,17 @@ const StyledHome = styled.div`
 
         span{
             font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        .texto-home{
+            h1{
+                font-size: 2.5rem;
+            }
+            span{
+                font-size: 1rem;
+            }
         }
     }
     

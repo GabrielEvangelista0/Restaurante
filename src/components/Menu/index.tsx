@@ -19,8 +19,7 @@ export default function Menu() {
         }
 
         
-    ] 
-    const [numero, setnumero] = useState<number>(5)
+    ]
     return (
 
         <StyledMenu>
@@ -40,8 +39,10 @@ export default function Menu() {
 }
 
 const StyledMenu = styled.nav`
+    width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
         ul{
         display: flex;
         align-items: center;
@@ -66,6 +67,16 @@ const StyledMenu = styled.nav`
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 900px) {
+       ul{
+        li{
+            a{
+                font-size: 1rem;
+            }
+        }
+       }
     }
     
 `

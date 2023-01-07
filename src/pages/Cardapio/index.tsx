@@ -39,6 +39,11 @@ const StyledCardapio = styled.div`
     flex-wrap: wrap;
     width: 75%;
     padding: 2rem 0px;
+
+    @media screen and (max-width: 860px){
+        flex-direction: column;
+        align-items: center;
+    }
     
 `
 
@@ -70,13 +75,11 @@ const StyledPrato = styled.div`
         }
         .tags-price{
             display: flex;
-            padding: 1rem;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: flex-end;
 
             .tags{
                 span{
-                    margin: 0 0.3rem;
                     padding: .5rem;
                     border-radius: 25px;
                     font-weight: bold;
@@ -106,5 +109,29 @@ const StyledPrato = styled.div`
                 font-weight: bold;
             }
         }
+
+        @media screen and (max-width: 1024px) {
+            .tags-price{
+                margin-top: 1rem;
+                display: block;
+                .tags{
+                font-size: .9rem;
+                margin-bottom: 1rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 860px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 396px) {
+            .tags{
+                span{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
 `
 
