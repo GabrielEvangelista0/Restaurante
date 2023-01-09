@@ -42,13 +42,31 @@ const StyledPrato = styled.div`
     align-items: center;
     flex-direction: column;
     width: 70%;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
 
     img{
         width: 300px;
         border-radius: 25px;
         box-shadow: 3px 3px 5px rgb(0 0 0 / 10%);
+    }
+
+    @media screen and (max-width: 1024px) {
+        img{
+            width: 250px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        img{
+            width: 200px;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        padding: 2rem;
     }
 
 `
@@ -107,6 +125,33 @@ const StyledDescricao = styled.div`
         &:hover{
             background-color: var(--cor3);
             color: var(--cor1);
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        margin-top: 1rem;
+        p{
+            text-align: justify;
+        }
+        .tags{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span{
+                width: 150px;
+                font-size: 0.9rem;
+            }
+        }
+
+        button{
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 570px){
+        font-size: 0.9rem;
+        .price{
+            font-size: 2rem;
         }
     }
 `

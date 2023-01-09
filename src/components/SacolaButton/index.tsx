@@ -18,7 +18,6 @@ export default function SacolaButton() {
 const Sacola = styled.button`
     color: var(--cor3);
     background-color: transparent;
-    font-size: 2rem;
     border: none;
     border-radius: 50%;
     cursor: pointer;

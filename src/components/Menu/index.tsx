@@ -78,5 +78,4 @@ const StyledMenu = styled.nav`
         }
        }
     }
-    
 `

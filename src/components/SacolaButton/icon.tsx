@@ -26,4 +26,11 @@ const StyledIcon = styled.div`
         left: -50%;
     }
 
+    @media screen and (max-width: 374px) {
+        font-size: 1.2rem;
+        span{
+            display: none;
+        }
+    }
+
 `
