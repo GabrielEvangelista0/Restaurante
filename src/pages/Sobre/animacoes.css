@@ -1,0 +1,79 @@
+.expandir {
+    animation-name: expandir;
+    animation-duration: 0.5s;
+}
+
+.entrarEsqueda {
+    animation-name: entrarEsqueda;
+    animation-duration: 1s;
+}
+
+.entrarDireita {
+    animation-name: entrarDireita;
+    animation-duration: 1s;
+}
+
+.animacaoOpacidade {
+    animation-name: opacidade;
+    animation-duration: 5s;
+}
+
+.expadinLinha{
+    animation-name: expandir;
+    animation-duration: 3s;
+}
+
+@keyframes expandir {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes entrarEsqueda {
+    0% {
+        left: -100vh;
+    }
+
+    100% {
+        left: 0vh;
+    }
+}
+
+@keyframes entrarDireita {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+
+}
+
+@keyframes opacidade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes linha{
+    0% {
+        width: 0%;
+    }
+
+    90% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
