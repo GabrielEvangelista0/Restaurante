@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import './animacoes.css'
+import './responsivo.css'
 import { BsWhatsapp, BsInstagram } from 'react-icons/bs'
 import { AiOutlinePhone } from 'react-icons/ai'
 
@@ -51,8 +52,8 @@ export default function Sobre() {
                 <h2 className="titulo">"Depoimentos"</h2>
                 <div className={`comentairios ${depoimentosEvisivel ? 'animacaoOpacidade' : ''}`}>
                     <div className={`comentario`}>
-                        <div className="imagem" 
-                        style={{backgroundImage: "url('../../assets/pessoa2.jpg')"}}
+                        <div className="imagem"
+                            style={{ backgroundImage: "url('../../assets/pessoa2.jpg')" }}
                         ></div>
                         <h3>João</h3>
                         <p>
@@ -61,7 +62,7 @@ export default function Sobre() {
                     </div>
                     <div className={`comentario `}>
                         <div className="imagem"
-                        style={{backgroundImage: "url('../../assets/pessoa3.jpg')"}}
+                            style={{ backgroundImage: "url('../../assets/pessoa3.jpg')" }}
                         ></div>
                         <h3>Chico</h3>
                         <p>
@@ -70,7 +71,7 @@ export default function Sobre() {
                     </div>
                     <div className={`comentario`}>
                         <div className="imagem"
-                        style={{backgroundImage: "url('../../assets/pessoa1.jpg')"}}
+                            style={{ backgroundImage: "url('../../assets/pessoa1.jpg')" }}
                         ></div>
                         <h3>Maria</h3>
                         <p>
@@ -124,16 +125,17 @@ const StyledQuemSomos = styled.section`
         background-position: center center;
         box-shadow: 3px 3px 5px rgb(0 0 0 / 10%);
         height: 60vh;
-        width: 50%;
+        width: 100%;
         border-radius: 10px;
         margin-right: 2rem;
         position: relative;
+        float: right;
     }
 
     .texto{
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         align-self: center;
         text-align: justify;
         position: relative;
@@ -144,6 +146,12 @@ const StyledQuemSomos = styled.section`
             font-size: 2rem;
         }
     }
+
+    @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    width: 90vw;
+
+}
 
 `
 
@@ -180,7 +188,7 @@ const SyledDepoimentos = styled.section`
         height: 70%;
 
         .comentario{
-            width: 25%;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -202,6 +210,15 @@ const SyledDepoimentos = styled.section`
         }
     }
 
+    @media screen and (max-width: 600px) {
+        .titulo{
+            font-size: 3rem;
+        }
+        .comentairios{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
 `
 
@@ -209,7 +226,7 @@ const StyledInfo = styled.section`
 
     display: flex;
     justify-content: space-between;
-    width: 70vw;
+    width: 90vw;
     margin: 20vh auto;
     text-align: center;
 
@@ -218,6 +235,8 @@ const StyledInfo = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
 
         .telefone{
                 font-weight: bold;
@@ -245,8 +264,13 @@ const StyledInfo = styled.section`
         flex-direction: column;
         justify-content: space-between;
         padding: 1rem;
-        width: 50%;
+        width: 100%;
         height: 60vh;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
     }
 
 `
