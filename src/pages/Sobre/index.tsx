@@ -135,6 +135,7 @@ const StyledQuemSomos = styled.section`
         
         .titulo{
             color: var(--cor3);
+            font-size: 2rem;
         }
     }
 
