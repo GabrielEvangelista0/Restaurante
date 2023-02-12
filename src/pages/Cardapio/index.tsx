@@ -43,7 +43,7 @@ const StyledCardapio = styled.div`
     @media screen and (max-width: 860px){
         flex-direction: column;
         align-items: center;
-        width: 90vw;
+        width: 100vw;
     }
     
 `
@@ -123,7 +123,7 @@ const StyledPrato = styled.div`
         }
 
         @media screen and (max-width: 860px) {
-            width: 100%;
+            width: 80vw;
         }
 
         @media screen and (max-width: 396px) {
