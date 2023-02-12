@@ -1,5 +1,5 @@
 import Menu from "components/Menu"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export default function Home() {
     return (
@@ -7,7 +7,9 @@ export default function Home() {
             
             <Menu />
             <div className="texto-home">
-                <h1>Restaurante D'épices</h1>
+                <h1>Restaurante D'épices
+                    <span className="linha"></span>
+                </h1>
                 <span>
                     Sempre servindo comida boa.
                 </span>
@@ -15,6 +17,18 @@ export default function Home() {
         </StyledHome>
     )
 }
+
+const animacaoLinha = keyframes`
+
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+
+`
 
 const StyledHome = styled.div`
     color: white;
@@ -33,9 +47,21 @@ const StyledHome = styled.div`
         text-align: center;
 
     h1{
-        border-bottom: 2px solid var(--cor3);
+        
         font-size: 4rem;
         padding-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .linha{
+            display: block;
+            width: 100%;
+            border-bottom: 2px solid var(--cor3);
+            height: 5px;
+            animation-name: ${animacaoLinha};
+            animation-duration: 2s;
+        }
     }
 
         span{

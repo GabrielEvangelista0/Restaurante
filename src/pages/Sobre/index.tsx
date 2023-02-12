@@ -46,29 +46,27 @@ export default function Sobre() {
                     </p>
                 </div>
             </StyledQuemSomos>
-            <StyledMapa ref={mapaRef} className={`${mapaEvisivel ? 'expandir' : ''}`}>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15163.673801720255!2d-47.92853678822022!3d-18.167670243938343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a666016b03da09%3A0x27ffd0e0bd92fe45!2sCatal%C3%A3o%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1676049371247!5m2!1spt-BR!2sbr" width="100%" height='100%'></iframe>
-            </StyledMapa>
+
             <SyledDepoimentos ref={depoimentosRef}>
                 <h2 className="titulo">"Depoimentos"</h2>
                 <div className={`comentairios ${depoimentosEvisivel ? 'animacaoOpacidade' : ''}`}>
                     <div className={`comentario`}>
                         <div className="imagem"></div>
-                        <h3>Nome</h3>
+                        <h3>João</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
                         </p>
                     </div>
                     <div className={`comentario `}>
                         <div className="imagem"></div>
-                        <h3>Nome</h3>
+                        <h3>Chico</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
                         </p>
                     </div>
                     <div className={`comentario`}>
                         <div className="imagem"></div>
-                        <h3>Nome</h3>
+                        <h3>Maria</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
                         </p>
@@ -92,6 +90,10 @@ export default function Sobre() {
                     </p>
                 </div>
             </StyledInfo>
+
+            <StyledMapa ref={mapaRef} className={`${mapaEvisivel ? 'expandir' : ''}`}>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15163.673801720255!2d-47.92853678822022!3d-18.167670243938343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a666016b03da09%3A0x27ffd0e0bd92fe45!2sCatal%C3%A3o%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1676049371247!5m2!1spt-BR!2sbr" width="100%" height='100%'></iframe>
+            </StyledMapa>
 
         </section>
     )
@@ -153,6 +155,7 @@ const SyledDepoimentos = styled.section`
     background-color: var(--cor1);
     padding: 2rem;
     margin-bottom: 20vh;
+    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.3);
     
 
     .titulo{
@@ -201,7 +204,7 @@ const StyledInfo = styled.section`
     display: flex;
     justify-content: space-between;
     width: 70vw;
-    margin: 2rem auto;
+    margin: 20vh auto;
     text-align: center;
 
     .contato{
