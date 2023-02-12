@@ -43,6 +43,7 @@ const StyledCardapio = styled.div`
     @media screen and (max-width: 860px){
         flex-direction: column;
         align-items: center;
+        width: 90vw;
     }
     
 `
