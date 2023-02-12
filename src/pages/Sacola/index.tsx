@@ -9,8 +9,6 @@ export default function Sacola() {
 
     const navegate = useNavigate()
     const pedidos = useMostrarPedidos()
-    const adicionar = useAdcionar()
-    const subtrair = useSubtrair()
 
     return (
         <StyledSacola>

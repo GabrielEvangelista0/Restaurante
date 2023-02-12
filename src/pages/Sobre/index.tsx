@@ -51,21 +51,27 @@ export default function Sobre() {
                 <h2 className="titulo">"Depoimentos"</h2>
                 <div className={`comentairios ${depoimentosEvisivel ? 'animacaoOpacidade' : ''}`}>
                     <div className={`comentario`}>
-                        <div className="imagem"></div>
+                        <div className="imagem" 
+                        style={{backgroundImage: "url('../../assets/pessoa2.jpg')"}}
+                        ></div>
                         <h3>João</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
                         </p>
                     </div>
                     <div className={`comentario `}>
-                        <div className="imagem"></div>
+                        <div className="imagem"
+                        style={{backgroundImage: "url('../../assets/pessoa3.jpg')"}}
+                        ></div>
                         <h3>Chico</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
                         </p>
                     </div>
                     <div className={`comentario`}>
-                        <div className="imagem"></div>
+                        <div className="imagem"
+                        style={{backgroundImage: "url('../../assets/pessoa1.jpg')"}}
+                        ></div>
                         <h3>Maria</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione voluptates hic in, optio eaque quasi similique aliquid nemo earum. Corrupti officiis provident fugit molestiae nulla molestias, asperiores non atque.
@@ -180,12 +186,11 @@ const SyledDepoimentos = styled.section`
             flex-direction: column;
             align-items: center;
             .imagem{
-                width: 300px;
-                height: 300px;
-                border-radius: 40px;
-                background-image: url('../../assets/pexels-sebastian-coman-photography-3437689.jpg');
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
                 background-size: cover;
-                background-position: center center;
+                background-position: center top;
                 background-repeat: no-repeat;
             }
             h3{
