@@ -26,6 +26,7 @@ const animacaoLinha = keyframes`
 
     100%{
         width: 100%;
+        
     }
 
 `
