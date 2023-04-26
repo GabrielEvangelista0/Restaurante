@@ -10,16 +10,12 @@ export default function Sobre() {
     const depoimentosRef = useRef(null!)
     const [mapaEvisivel, setMapaEVisivel] = useState<boolean>()
     const [depoimentosEvisivel, setdepoimentoEVisivel] = useState<boolean>()
-    console.log('depoimento e visivel', depoimentosEvisivel);
-
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0]
             setMapaEVisivel(entry.isIntersecting)
             //setdepoimentoEVisivel(entry.isIntersecting)
-            console.log(entry);
-
         })
         const descricaoObserver = new IntersectionObserver((entries) => {
             const entry = entries[0]

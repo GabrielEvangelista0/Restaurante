@@ -1,4 +1,4 @@
-import PaginaPadrao from 'components/PaginaPadrao/indec';
+import PaginaPadrao from 'components/PaginaPadrao';
 import Cardapio from 'pages/Cardapio';
 import FinalizarPedido from 'pages/FinalizarPedido';
 import Home from 'pages/Home/Home';
